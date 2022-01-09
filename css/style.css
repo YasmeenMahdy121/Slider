@@ -1,0 +1,93 @@
+/*start global rules*/
+:root {
+  --active-color:#460626;
+  --disabled-color:#944b70;
+}
+
+* {
+  list-style: none;
+}
+
+/*end global rules*/
+#slider .container {
+  width: 60%;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+#slider .container .slider-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+#slider .container .slider-container .slider-num {
+  color: white;
+  background-color: rgba(14, 13, 13, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px 0 0 10px;
+  position: absolute;
+  z-index: 2;
+}
+#slider .container .slider-container img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+#slider .container .slider-container .active {
+  opacity: 1;
+}
+#slider .container .controls {
+  padding: 30px 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+#slider .container .controls .prev, #slider .container .controls .next {
+  background-color: var(--active-color);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+#slider .container .controls .prev {
+  float: left;
+}
+#slider .container .controls .next {
+  float: right;
+}
+#slider .container .controls .disabled {
+  background-color: var(--disabled-color);
+  cursor: no-drop;
+}
+#slider .container .controls .indecators {
+  display: flex;
+  align-items: center;
+}
+#slider .container .controls .indecators ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#slider .container .controls .indecators ul li {
+  background-color: gainsboro;
+  padding: 2px 10px;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+#slider .container .controls .indecators ul .active {
+  background-color: var(--active-color);
+  color: white;
+}/*# sourceMappingURL=style.css.map */
